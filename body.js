@@ -59,14 +59,19 @@ document.getElementById('changeBgBtn').addEventListener('click', function () {
     }
 });
 
-document.getElementById('changeBgBtn').addEventListener('click', function () {
-    if (document.body.classList.contains("light-theme")) {
-        document.body.classList.remove("light-theme");
-        document.body.classList.add("dark-theme");
-        document.getElementById("changeBgBtn").innerHTML = 'Light Mode <i class="fa-solid fa-sun"></i>';
+const changeBgBtn = document.getElementById('changeBgBtn');
+const body = document.body;
+
+changeBgBtn.addEventListener('click', () => {
+    // Alterna entre light-theme e dark-theme
+    body.classList.toggle('light-theme');
+    body.classList.toggle('dark-theme');
+
+    // Altera o texto do botão para refletir a mudança de tema
+    if (body.classList.contains('light-theme')) {
+        changeBgBtn.textContent = "Dark Mode"; // Mudar para modo escuro
     } else {
-        document.body.classList.remove("dark-theme");
-        document.body.classList.add("light-theme");
-        document.getElementById("changeBgBtn").innerHTML = 'Dark Mode <i class="fa-solid fa-moon"></i>';
+        changeBgBtn.textContent = "Light Mode"; // Mudar para modo claro
     }
 });
+

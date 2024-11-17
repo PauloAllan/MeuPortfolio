@@ -9,7 +9,7 @@ a {
     color: #fff;
 }
 
-.pov {
+.pov{
     font-weight: bold;
     font-size: 31px;
 }
@@ -24,29 +24,50 @@ a {
     font-weight: bold;
 }
 
+body.dark-theme .btn-projetos {
+    background-color: #1a1a1a9d; 
+    color: white;
+}
+
+body.dark-theme .btn-projetos:hover {
+    background-color: #076aff; 
+}
+
 body {
     color: #fff;
-    background-color: #000016;
-    background-image: radial-gradient(at 10% 80%, rgb(0, 7, 22) 0px, transparent 50%),
-                      radial-gradient(at 70% 10%, rgb(30, 0, 60) 0px, transparent 50%),
-                      radial-gradient(at 25% 25%, rgb(16, 0, 37) 0px, transparent 50%),
-                      radial-gradient(at 60% 15%, rgb(20, 5, 50) 0px, transparent 50%),
-                      radial-gradient(at 15% 90%, rgb(10, 20, 45) 0px, transparent 50%),
-                      radial-gradient(at 40% 15%, rgb(5, 10, 35) 0px, transparent 50%),
-                      radial-gradient(at 10% 10%, rgb(15, 0, 40) 0px, transparent 50%);
-    min-height: 100vh;
+background-color: #000016;
+background-image: radial-gradient(at 10% 80%, rgb(0, 7, 22) 0px, transparent 50%),
+                  radial-gradient(at 70% 10%, rgb(30, 0, 60) 0px, transparent 50%),
+                  radial-gradient(at 25% 25%, rgb(16, 0, 37) 0px, transparent 50%),
+                  radial-gradient(at 60% 15%, rgb(20, 5, 50) 0px, transparent 50%),
+                  radial-gradient(at 15% 90%, rgb(10, 20, 45) 0px, transparent 50%),
+                  radial-gradient(at 40% 15%, rgb(5, 10, 35) 0px, transparent 50%),
+                  radial-gradient(at 10% 10%, rgb(15, 0, 40) 0px, transparent 50%);
+min-height: 100vh;
 }
 
 .container {
     display: flex;
     justify-content: center;
-    margin-top: -30px;
 }
 
 .glass-container {
     display: block;
     max-width: 72vw;
     margin-top: 6vh;
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.56);
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+}
+
+.glass-container2 {
+    display: block;
+    max-width: 72vw;
+    margin-top: 2vh;
     margin-bottom: 30px;
     background: rgba(0, 0, 0, 0.56);
     padding: 50px;
@@ -63,7 +84,7 @@ body {
     margin-top: -20px;
 }
 
-#uto-message {
+#uto-message{
     visibility: hidden;
     position: absolute;
     top: 50%;
@@ -78,6 +99,27 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
+.auto-message {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.9em;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#auto-message {
+    font-size: 15px;
+}
+
+/* Estilo do card */
 .hidden-card {
     position: fixed;
     width: 450px;
@@ -94,12 +136,14 @@ body {
 
 .card-content {
     text-align: center;
+    
 }
 
 .card-content h3 {
     margin-bottom: 10px;
     font-size: 1.5rem;
     color: #00032b;
+    
 }
 
 .card-content p {
@@ -120,6 +164,8 @@ body {
 .card-content button:hover {
     background-color: #1a1a59;
 }
+
+
 
 ul.nav-links {
     margin: 0;
@@ -165,16 +211,14 @@ button {
     transition: all 0.3s ease;
 }
 
-.btn-1 {
+.btn-1{
     margin-top: 10px;
     width: 100%;
     height: 40px;
 }
 
-
-
 .btn-projetos {
-    margin-top: 40px;
+    margin-top: 10px;
     width: 20rem;
     height: 40px;
     transition: background-color 0.3s, color 0.3s;
@@ -213,44 +257,38 @@ button:hover {
         font-size: 14px;
         margin-bottom: 10px;
     }
-
+    #auto-message {
+        font-size: 10px;
+    }
     li.nav-link {
         font-size: 13px;
     }
-
     .nav-link {
         padding-right: 25px;
     }
-
-    #changeBgBtn {
-        position: fixed;
-        margin-top: -20px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    #changeBgBtn{
+    position: fixed;
+    margin-top: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     }
-
     .main h2 {
         font-size: 28px;
     }
-
     .main p {
         font-size: 15px;
     }
-
     .main {
         margin-top: 1vh;
         display: inline-block;
         padding: 20px;
     }
-
     button {
         font-size: 13px;
     }
-
     .image-wrapper img {
         max-width: 250px;
     }
-
     .redes a {
         text-decoration: none;
         display: flex;
@@ -259,28 +297,25 @@ button:hover {
         margin: 0 10px;
         transition: transform 0.0s;
     }
-
     .hidden-card {
         top: 20%;
         width: 300px;
     }
-
-    .pov {
+    .pov{
         font-size: 22px;
     }
-
     .card-content h3 {
         margin-bottom: 10px;
         font-size: 17px;
         color: #00032b;
     }
-
+    
     .card-content p {
         font-size: 13px;
         color: #333;
         margin-bottom: 15px;
     }
-
+    
     .card-content button {
         padding: 5px 15px;
         background-color: #00032b;
@@ -289,6 +324,16 @@ button:hover {
         border-radius: 5px;
         cursor: pointer;
     }
+}
+
+@media screen and (min-width: 720px){
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    
 }
 
 .carousel {
@@ -360,6 +405,7 @@ button:hover {
     transition: transform 0.3s;
 }
 
+
 .redes .icon {
     font-size: 25px;
 }
@@ -376,30 +422,50 @@ button:hover {
     font-size: 14px;
 }
 
-footer {
+
+::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+ 
+  ::-webkit-scrollbar-thumb {
+    background: #efecf0; 
+    border-radius: 5px; 
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0450b3; 
+  }
+  
+footer{
+
     padding: 50px 0;
 }
-
-.container-footer {
+.container-footer{
     max-width: 1400px;
     padding: 0 4%;
     margin: auto;
 }
-
-.row-footer {
+.row-footer{
     display: flex;
     flex-wrap: wrap;
 }
 
+/* Responsivo */
 @media (max-width: 800px) {
-    .footer-col {
+    .footer-col{
         width: 50%;
         margin-bottom: 30px;
     }
 }
-
-@media (max-width: 600px) {
-    .footer-col {
+@media (max-width:600px) {
+    .footer-col{
         width: 100%;
     }
 }
