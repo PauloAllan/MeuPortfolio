@@ -171,9 +171,11 @@ button {
     height: 40px;
 }
 
+
+
 .btn-projetos {
-    margin-top: 10px;
-    width: 50%;
+    margin-top: 40px;
+    width: 20rem;
     height: 40px;
     transition: background-color 0.3s, color 0.3s;
 }
