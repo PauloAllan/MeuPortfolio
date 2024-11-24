@@ -1,12 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Site em Construção</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+        * {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        body {
+            color: #fff;
+            background-color: #000016;
+            background-image: radial-gradient(at 10% 80%, rgb(0, 7, 22) 0px, transparent 50%),
+                radial-gradient(at 70% 10%, rgb(30, 0, 60) 0px, transparent 50%),
+                radial-gradient(at 25% 25%, rgb(16, 0, 37) 0px, transparent 50%),
+                radial-gradient(at 60% 15%, rgb(20, 5, 50) 0px, transparent 50%),
+                radial-gradient(at 15% 90%, rgb(10, 20, 45) 0px, transparent 50%),
+                radial-gradient(at 40% 15%, rgb(5, 10, 35) 0px, transparent 50%),
+                radial-gradient(at 10% 10%, rgb(15, 0, 40) 0px, transparent 50%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .card {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            width: 90%;
+            /* Card ocupa 90% da tela */
+            max-width: 500px;
+            /* Largura máxima de 500px */
+            z-index: 1000;
+            font-size: 18px;
+            animation: float 3s ease-in-out infinite;
+            box-sizing: border-box;
+            /* Garantir que o padding não afete o tamanho */
+        }
+
+        .card h1 {
+            color: #ff6347;
+            font-size: 28px;
+        }
+
+        .card p {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #00bfff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animação de flutuação */
+        @keyframes float {
+            0% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        /* Responsividade para dispositivos móveis */
+        @media (max-width: 600px) {
+            .card {
+                padding: 30px;
+                /* Menos padding em telas pequenas */
+                width: 80%;
+                /* Menor largura para caber melhor na tela */
+                font-size: 16px;
+                /* Fonte menor */
+            }
+
+            .card h1 {
+                font-size: 24px;
+                /* Título menor */
+            }
+
+            .card p,
+            .card a {
+                font-size: 16px;
+                /* Texto e links menores */
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Em construção</h1>
-    <a href="index.html">Retonar</a>
+    <div class="card">
+        <h1>Site em Construção</h1>
+        <p>Este site ainda está sendo desenvolvido. Enquanto isso, você pode acessar meus projetos no GitHub.</p>
+        <p><a href="https://github.com/PauloAllan" target="_blank">Visite meu GitHub</a></p>
+        <p><a href="index.html">Retornar à página inicial</a></p>
+    </div>
 </body>
+
 </html>
